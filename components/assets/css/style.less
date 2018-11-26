@@ -1,0 +1,70 @@
+.ant-time-picker,
+.ant-input-number,
+.ant-calendar-picker {
+  width: 100%;
+}
+.ant-form input[type='file'] {
+  display: inline-block;
+}
+//处理input-group select的问题
+form
+  .afc-input-group
+  .has-feedback
+  :not(.ant-input-group-addon)
+  > .ant-select
+  .ant-select-arrow {
+  right: 11px;
+}
+.ant-form-item-children {
+  display: block;
+}
+
+.afc-array-item {
+  margin-bottom: 24px;
+  .afc-array-item (@width) {
+    @array-input-right-width: @width;
+    .afc-array-item-right {
+      width: @array-input-right-width;
+    }
+    .has-success.has-feedback,
+    .has-warning.has-feedback,
+    .has-error.has-feedback,
+    .is-validating.has-feedback {
+      &:after {
+        //这里是antd@2.x.x
+        right: @array-input-right-width;
+      }
+      .ant-form-item-children:after {
+        //这里是antd@3.x.x
+        right: @array-input-right-width;
+      }
+    }
+    .afc-array-item-plus {
+      float: right;
+      width: @array-input-right-width - 15;
+    }
+  }
+  &-large {
+    .afc-array-item(158px);
+  }
+  &-default {
+    .afc-array-item(150px);
+  }
+  &-small {
+    .afc-array-item(103px);
+  }
+  &-con {
+    display: flex;
+  }
+  &-left {
+    flex: 1;
+  }
+  &-radiogroup {
+    float: right;
+  }
+}
+.afc-hide-label {
+  .ant-form-item-label {
+    visibility: hidden;
+  }
+}
