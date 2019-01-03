@@ -2,3 +2,6 @@
 .vscode/
 node_modules/
 components/
+example/
+dist/
+webpack.config.js
